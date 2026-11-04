@@ -1,0 +1,36 @@
+.navbar{
+      background-color: black;
+      backdrop-filter:blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius:8px;
+      color:white;
+      width:100vw;
+      height:10vh;
+      position:sticky;
+      top:0;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+}
+.navbar h2{
+    display:inline;
+    margin-left:2vw;
+}
+.navlinks{
+    display:flex;
+    gap:2vw;
+    margin-right:2vw;
+}
+.navlinks a{
+    text-decoration:none;
+    color:white;
+}
+.navlinks a:hover{
+    box-shadow: 0px 0px 10px 10px gray;
+    background-color:grey;
+    border-radius:10px;
+}
+*:focus{
+    outline:2px solid blue;
+    border-radius:4px;
+}

@@ -1,0 +1,168 @@
+.hero-text{
+   width:49vw;
+}
+.hero-text p{
+    color:white;
+    font-size:1.2rem;
+}
+.hero-text h1{
+    color:white;
+    font-size:3rem;
+}
+#dev{
+    background: linear-gradient(90deg, #00ffff, #0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size:3rem;
+    margin-top:0;
+}
+.profile{
+    width:49vw;
+    height:49vh;
+    background-color:transparent;
+    border-radius:10px;
+}
+h1{
+    color:white;
+}
+.profile-image{
+    width:45%;
+    aspect-ratio:1 / 1;
+    object-fit: cover;
+    border-radius:50%;
+    z-index:99;
+    margin-top:-10vh;
+}
+.profile-image img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center;
+}
+.dot {
+  width: 5px;
+  aspect-ratio: 1;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 100%;
+  z-index: 2;
+  animation: moveDot 6s linear infinite;
+}
+.card {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  margin:auto;
+  aspect-ratio:1 / 1;
+  border-radius: 9px;
+  border: solid 1px #202222;
+  background-size: 20px 20px;
+  background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  color: #fff;
+}
+.ray {
+  width: 220px;
+  height: 45px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #c7c7c7;
+  opacity: 0.4;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(10px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.card .text {
+  font-weight: bolder;
+  font-size: 3rem;
+  background: linear-gradient(45deg, #000000 4%, #fff, #000);
+  background-clip: text;
+  color: transparent;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #2c2c2c;
+}
+.topl {
+  top: 10%;
+  background: linear-gradient(90deg, #888888 30%, #1d1f1f 70%);
+}
+.bottoml {
+  bottom: 10%;
+}
+.leftl {
+  left: 10%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #747474 30%, #222424 70%);
+}
+.rightl {
+  right: 10%;
+  width: 1px;
+  height: 100%;
+}
+
+@keyframes moveDot {
+  0%,
+  100% {
+    top: 10%;
+    right: -90%;
+  }
+  25% {
+    top: 10%;
+    right: -9%;
+  }
+  50% {
+    top: calc(90%);
+    right:-10%;
+  }
+  75% {
+    top:90%;
+    right: -90%;
+  }
+}
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+/* From Uiverse.io by ShrinilDhorda */ 
+.hero-buttons button {
+  font-size: 0.8rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.hero-buttons .button:active {
+  scale: 0.92;
+}
+
+.hero-buttons button:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+  scale:1.1;
+}
