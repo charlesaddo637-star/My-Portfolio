@@ -16,19 +16,24 @@ export default function Hero() {
   });
 }}>CONTACT ME</button>
             </div>
-            
+            <div id="hero-bottom">
+              <div><h2>20+</h2><p>Projects</p></div>
+              <div><h2>1</h2><p>Internship</p></div>
+              <div><h2>100%</h2><p>Passion</p></div>
+            </div>
         </div>
         <div className="profile">
-            <div className="dot"></div>
+            <div className="dot2"></div>
+            <div className="dot3"></div>
+            <div className="dot4"></div>
             <div className="card">
+              <div className="orbit">
+        <div className="dot1"></div>
+           </div>
                 <div className="profile-image"><img loading="lazy" src="/Portfolio.webp" alt="Profile picture" /></div>
                 <div className="ray"></div>
                 <div className="text">Charles</div>
                 <div>Frontend Developer</div>
-                <div className="line topl"></div>
-                <div className="line leftl"></div>
-                <div className="line bottoml"></div>
-                <div className="line rightl"></div>
                 <div className="buttons">
                 </div>
   </div>
