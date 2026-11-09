@@ -5,6 +5,112 @@ body{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:2rem;
+    gap:1rem;
     margin-top:5vh;
+}
+.skills-container label{
+    border:1px solid rgb(69, 69, 117);
+    border-radius:5px;
+    padding:5px;
+}
+.projects{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+    margin-top:5vh;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 5vh;
+}
+#projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px, 1fr));
+    gap:20px;
+}
+.project{
+    padding:10px;
+    border:1px solid #ddd;
+    background-image:url("https://images.unsplash.com/photo-1633259584604-afdc243122ea?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGFyayUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+    background-size:cover;
+    color:blanchedalmond;
+    border-radius:10px;
+    position:relative;
+    text-align:center;
+    height:45vh;
+}
+.project:hover{
+    box-shadow:0px 0px 50px rgb(104, 104, 192);
+    transform: translateY(-15px) scale(1.05);
+    transition: all 0.4s ease-in-out;
+}
+.project h3{
+  overflow-x:auto;
+  white-space:nowrap;
+  height:10%;
+  scrollbar-width:none;
+}
+.project p{
+    width:100%;
+    height:30%;
+    overflow:auto;
+    scrollbar-width:none;
+}
+#topics{
+  height:10%;
+  color:white;
+  font-size:0.8rem;
+  font-weight:bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.button-icon {
+  display: flex;
+  border: 3px #fff solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.icon {
+  background-color: #fff;
+}
+.icon svg {
+  width: 100%;
+  height: 45px;
+}
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+}
+.button-icon:hover {
+  border-color: #ff98a2;
+}
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+.side {
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.top {
+  background: #ff98a2;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
 }

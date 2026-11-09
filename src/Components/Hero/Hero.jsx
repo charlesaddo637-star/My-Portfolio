@@ -23,13 +23,13 @@ export default function Hero() {
             </div>
         </div>
         <div className="profile">
-            <div className="dot2"></div>
-            <div className="dot3"></div>
-            <div className="dot4"></div>
             <div className="card">
               <div className="orbit">
-        <div className="dot1"></div>
-           </div>
+                <div className="dot1"></div>
+                <div className="dot2"></div>
+                <div className="dot3"></div>
+                <div className="dot4"></div>
+              </div>
                 <div className="profile-image"><img loading="lazy" src="/Portfolio.webp" alt="Profile picture" /></div>
                 <div className="ray"></div>
                 <div className="text">Charles</div>
