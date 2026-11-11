@@ -13,6 +13,12 @@ body{
     border-radius:5px;
     padding:5px;
 }
+.skills-container label:hover{
+    transform: scale(1.05);
+    background-color:rgba(218, 213, 213, 0.541);
+    transition: all 0.4s ease-in-out;
+    cursor:pointer;
+}
 .projects{
     display:flex;
     flex-wrap:wrap;

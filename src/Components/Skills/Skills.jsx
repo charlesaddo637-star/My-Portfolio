@@ -25,8 +25,8 @@ export default function Skills() {
       <h1>Featured Projects</h1>
     <div id="projects">
       {repos.map(repo => (<div className="project" key={repo.id}>
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "No description available."}</p>     
+            <h3>{repo.name}</h3>
+            <p>{repo.description || "No description available."}</p>     
              <div class="button-icon">
   <div class="icon">
     <svg viewBox="0 0 24 24">
@@ -41,7 +41,7 @@ export default function Skills() {
     <span class="side top" onClick="window.open('${repo.html_url}', '_blank')">check it on github</span>
   </div>
 </div>
-            <p id="topics">${repo.topics[0] || "No topics available."}</p>
+            <p id="topics">{repo.topics[0] || "No topics available."}</p>
             </div>))}
     </div>
   </section>

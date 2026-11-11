@@ -46,9 +46,9 @@ h1{
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-
+  width: 50vw;
+  height: 50vh;
+  z-index: -1;
   transform: translate(-50%, -50%);
   animation: orbit 8s linear infinite;
 }
@@ -62,7 +62,7 @@ h1{
   border-radius: 50%;
   background: cyan;
   transform: translate(-50%, -50%) translateX(150px);
-  filter: drop-shadow(0 0 5px cyan);
+  box-shadow: 0 0 15px 8px cyan;
 }
 .dot2{
   position: absolute;
@@ -73,7 +73,7 @@ h1{
   border-radius: 50%;
   background: cyan;
   transform: translate(-50%, -50%) translateX(150px) rotate(120deg);
-  filter: drop-shadow(0 0 5px cyan);
+  box-shadow: 0 0 15px 8px cyan;
 }
 .dot3{
   position: absolute;
@@ -84,7 +84,8 @@ h1{
   border-radius: 50%;
   background: cyan;
   transform: translate(-50%, -50%) translateX(150px) rotate(240deg);
-  filter: drop-shadow(0 0 5px cyan);
+  box-shadow: 0 0 15px 8px cyan;
+
 }
 .dot4{
   position: absolute;
@@ -93,7 +94,7 @@ h1{
   border-radius: 50%;
   background: cyan;
   transform: translate(-50%, -50%) translateX(150px) rotate(360deg);
-  filter: drop-shadow(0 0 5px cyan);
+  box-shadow:0 0 15px 8px cyan;
 }
 @keyframes orbit {
   from {
