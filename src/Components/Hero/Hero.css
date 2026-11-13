@@ -44,15 +44,14 @@ h1{
 }
 .orbit {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  width: 50vw;
-  height: 50vh;
+  width: 200px;
+  height: 200px;
   z-index: -1;
   transform: translate(-50%, -50%);
   animation: orbit 8s linear infinite;
 }
-
 .dot1{
   position: absolute;
   top: 50%;
@@ -66,8 +65,8 @@ h1{
 }
 .dot2{
   position: absolute;
-  top: 100%;
-  right: 100%;
+  top: 120%;
+  right: 120%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -77,8 +76,8 @@ h1{
 }
 .dot3{
   position: absolute;
-  top: 50%;
-  right: 150%;
+  bottom: 120%;
+  right: 120%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -89,6 +88,8 @@ h1{
 }
 .dot4{
   position: absolute;
+  top:50%;
+  right: 190%;
   width: 10px;
   height: 10px;
   border-radius: 50%;
