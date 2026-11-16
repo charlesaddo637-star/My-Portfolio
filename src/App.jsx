@@ -16,6 +16,5 @@ export default function App() {
   <Skills/>
   <Experience/>
   <Contact/>
-  <Footer/>
   </>
 }

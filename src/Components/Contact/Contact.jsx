@@ -16,7 +16,7 @@ function Contact() {
            target="_blank">
           <span className="contact-icon">📧</span>
           <h3>Email</h3>
-          <p>@gmail.com</p>
+          <p>Send a message</p>
         </a>
 
         <a
