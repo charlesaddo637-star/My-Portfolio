@@ -2,15 +2,31 @@ import './Skills.css';
 import {useEffect,useState} from 'react';
 export default function Skills() {
   const [repos, setRepos] = useState([]);
-  useEffect(() => {
-    fetch("https://api.github.com/users/charlesaddo637-star/repos")
-     .then(response => response.json())
-     .then(repos => {
-        const filteredProjects = repos.filter(repo => repo.description?.includes("Featured"));
-        setRepos(filteredProjects)});
-     },[]);
+      useEffect(() => {
+  const getProjects = async () => {
+    try {
+      const response = await fetch(
+        "https://api.github.com/users/charlesaddo637-star/repos"
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP Error ${response.status}`);
+      }
+
+      const repos = await response.json();
+
+      const filteredProjects = repos.filter(
+        repo => repo.description?.includes("Featured")
+      );
+      setRepos(filteredProjects);
+    } catch (error) {
+      console.error("GitHub fetch failed:", error);
+    }
+  };
+  getProjects();
+}, []);
   return <section id="skills">
-    <h1 id="tech-stack">Tech Stack</h1>
+    <h2 id="tech-stack">Tech Stack</h2>
     <div className="skills-container">
         <label>HTML</label>
         <label>CSS</label>
@@ -22,10 +38,10 @@ export default function Skills() {
         <label>Git</label>
         <label>Github</label>
     </div>
-      <h1>Featured Projects</h1>
+      <h2>Featured Projects</h2>
     <div id="projects">
       {repos.map(repo => (<div className="project" key={repo.id}>
-            <h3>{repo.name}</h3>
+            <h2>{repo.name}</h2>
             <p>{repo.description || "No description available."}</p>
             <div className="button-container">     
              <div className="button-icon">

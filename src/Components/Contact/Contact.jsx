@@ -3,7 +3,7 @@ function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-header">
-        <span>CONTACT</span>
+        <h1>CONTACT</h1>
         <h2>Let's Connect</h2>
         <p>
           I'm always open to discussing new projects, internship opportunities,

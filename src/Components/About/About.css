@@ -1,6 +1,9 @@
 #about {
     font-family:Arial, Helvetica, sans-serif;
-    margin-top: 10vh;
+    text-align:center;
+}
+#about h2{
+    font-size:2rem;
 }
 .about-content{
     color:white;

@@ -4,7 +4,7 @@ export default function Navbar() {
     const [name, setName] = useState('Charles.dev');
     return <>
     <div className="navbar">
-            <h2 onMouseOver={()=>setName("Charles Kofi Addo")} onMouseLeave={()=>setName("Charles.dev")}>{name}</h2>
+            <h1 onMouseOver={()=>setName("Charles Addo")} onMouseLeave={()=>setName("Charles.dev")}>{name}</h1>
             <div className="navlinks">
             <a href="#about" aria-label>About</a>
             <a href="#skills">Skills</a>
@@ -13,4 +13,4 @@ export default function Navbar() {
             </div>
         </div>
     </>
-}
+}   

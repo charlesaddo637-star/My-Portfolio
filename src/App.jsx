@@ -5,6 +5,7 @@ import Hero from './Components/Hero/Hero.jsx';
 import About from './Components/About/About.jsx';
 import Skills from './Components/Skills/Skills.jsx';
 import Experience from './Components/Experience/Experience.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 export default function App() {
   return <>
   <div className="glow1"></div>
@@ -16,5 +17,6 @@ export default function App() {
   <Skills/>
   <Experience/>
   <Contact/>
+  <Footer/>
   </>
 }

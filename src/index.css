@@ -1,5 +1,6 @@
 body{
-    background-color:black;
+   background-color:#0f172a;
+   color:#fff;
 }
 .glow1{
     position:fixed;
@@ -16,13 +17,13 @@ body{
     position:fixed;
     top:30vh;
     left:50vw;
-    width:100vw;
-    height:120vh;
+    width:10vw;
+    height:10vh;
     background: radial-gradient(circle,rgba(172, 153, 153, 0.3) 10%,transparent 70%);
     pointer-events:none;
     z-index:-1;
     filter:blur(80px);
-}
+} 
 .hero{
     margin-left: 5vw;
     display:flex;
@@ -59,4 +60,11 @@ body{
         width:80vw;
         margin-left:0;
     }
+}
+*{
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+::webkit-scrollbar {
+    display:none;
 }

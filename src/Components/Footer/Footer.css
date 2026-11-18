@@ -1,0 +1,14 @@
+.footer{
+    background-image:url("/projectbg.avif");
+    color:blanchedalmond;
+    background-size:cover;
+    font-size:larger;
+    font-family:sans-serif;
+    position:relative;
+    font-weight: bolder;
+    width:100vw;
+    height:10vh;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+}
