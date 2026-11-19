@@ -30,9 +30,8 @@ export default function Experience() {
   ];
   return <>
   <section id="experience" className="roadmap">
-    <h1>Experience</h1>
     <div className="section-title">
-        <h1>My Learning Journey</h1>
+        <h2>My Learning Journey</h2>
         <p>From web foundations to modern frontend development</p>
     </div>
 

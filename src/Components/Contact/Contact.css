@@ -18,7 +18,7 @@
   font-weight: 600;
 }
 
-.contact-header h2 {
+.contact-header h3 {
   font-size: 3rem;
   margin: 15px 0;
 }
@@ -75,7 +75,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact-header h2 {
+  .contact-header h3 {
     font-size: 2.2rem;
   }
 
