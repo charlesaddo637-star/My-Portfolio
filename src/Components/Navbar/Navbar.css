@@ -1,37 +1,207 @@
-.navbar{
-      background-color: rgba(0,0,0,0.5);
-      backdrop-filter:blur(10px);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius:8px;
-      color:white;
-      width:100vw;
-      height:10vh;
-      position:sticky;
-      top:0;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      z-index:100;
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    width: 100vw;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
-.navbar h1{
-    display:inline;
-    margin-left:2vw;
+
+.navbar h1 {
+    display: inline;
+    margin-left: 2vw;
+    width: fit-content;
+    font-size: 1.5rem;
 }
-.navlinks{
-    display:flex;
-    gap:2vw;
-    margin-right:2vw;
+
+.portfolio-menu {
+    font-weight: 800;
+    color: white;
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.20),
+        0 10px 24px rgba(15, 23, 42, 0.18);
+    padding: 3px 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    width: 12rem;
+    position: relative;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-right: 2vw;
+    box-sizing: border-box;
 }
-.navlinks a{
-    text-decoration:none;
-    color:white;
+
+.portfolio-menu__input {
+    display: none;
 }
-.navlinks a:hover{
-    box-shadow: 0px 0px 10px 10px gray;
-    background-color:grey;
-    border-radius:10px;
+
+.portfolio-menu__container {
+    background: rgba(69, 24, 99, 0.4);
+    backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.16),
+        0 16px 32px rgba(0, 0, 0, 0.20);
+    color: rgb(255, 255, 255);
+    border-radius: 18px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 130%;
+    overflow: hidden;
+    clip-path: inset(0% 0% 0% 0% round 10px);
+    transition: all 0.4s;
 }
-*:focus{
-    outline:2px solid blue;
-    border-radius:4px;
+
+.portfolio-menu__list {
+    --delay: 0.4s;
+    --trdelay: 0.15s;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    margin: 5px;
+    padding: 9px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.14),
+        0 5px 12px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    transition:
+        background-color 0.2s 0s,
+        border-color 0.2s 0s,
+        box-shadow 0.2s 0s;
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.portfolio-menu__list::before,
+.portfolio-menu__list::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 7px;
+    height: 7px;
+    opacity: 0.64;
+    filter: blur(0.25px);
+    pointer-events: none;
+}
+
+.portfolio-menu__list::before {
+    left: 3px;
+    top: 3px;
+    border-top: 1px solid rgba(255, 255, 255, 0.82);
+    border-left: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 7px 0 0 0;
+}
+
+.portfolio-menu__list::after {
+    right: 3px;
+    bottom: 3px;
+    border-right: 1px solid rgba(255, 255, 255, 0.58);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 0 0 7px 0;
+}
+
+.portfolio-menu__list:hover {
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.24),
+        0 7px 16px rgba(0, 0, 0, 0.12);
+    scale: 1.05;
+}
+
+.portfolio-menu__input:checked ~ .portfolio-menu__container {
+    clip-path: inset(10% 50% 90% 50% round 10px);
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__container .portfolio-menu__list {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__container .portfolio-menu__list:nth-child(1) {
+    transition:
+        transform 0.4s var(--delay),
+        opacity 0.4s var(--delay);
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__container .portfolio-menu__list:nth-child(2) {
+    transition:
+        transform 0.4s calc(var(--delay) + (var(--trdelay) * 1)),
+        opacity 0.4s calc(var(--delay) + (var(--trdelay) * 1));
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__container .portfolio-menu__list:nth-child(3) {
+    transition:
+        transform 0.4s calc(var(--delay) + (var(--trdelay) * 2)),
+        opacity 0.4s calc(var(--delay) + (var(--trdelay) * 2));
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__container .portfolio-menu__list:nth-child(4) {
+    transition:
+        transform 0.4s calc(var(--delay) + (var(--trdelay) * 3)),
+        opacity 0.4s calc(var(--delay) + (var(--trdelay) * 3));
+}
+
+.portfolio-menu__bar {
+    display: flex;
+    height: 50%;
+    width: 20px;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.portfolio-menu__bar-list {
+    --transform: -25%;
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: white;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__bar > .portfolio-menu__bar-list--top {
+    transform-origin: top right;
+    transform: translateY(var(--transform)) rotate(-45deg);
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__bar > .portfolio-menu__bar-list--middle {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.portfolio-menu__input:not(:checked) ~ .portfolio-menu__bar > .portfolio-menu__bar-list--bottom {
+    transform-origin: bottom right;
+    transform: translateY(calc(var(--transform) * -1)) rotate(45deg);
+}
+
+*:focus {
+    outline: 2px solid blue;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-menu {
+        width: 10rem;
+    }
 }

@@ -2,7 +2,7 @@ import './Hero.css';
 export default function Hero() {
     return <div className="hero">
         <div className="hero-text">
-            <h2>Frontend <p id="dev">Developer</p></h2>
+            <h2>Frontend <h2 id="dev">Developer</h2></h2>
             <p>Developing modern web applications with a focus on user experience and performance.</p>
             <div className="hero-buttons">
                 <button className="projects-button" onClick={() => {

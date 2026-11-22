@@ -16,6 +16,7 @@
     background-clip: text;
     font-size:3rem;
     margin-top:0;
+    width:fit-content;
 }
 .profile{
     width:49vw;
