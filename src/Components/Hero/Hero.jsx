@@ -30,7 +30,7 @@ export default function Hero() {
                 <div className="dot3"></div>
                 <div className="dot4"></div>
               </div>
-                <div className="profile-image"><img loading="lazy" src="/Portfolio.webp" alt="Profile picture" /></div>
+                <div className="profile-image"><img loading="lazy" src="./Portfolio.webp" alt="Profile picture" /></div>
                 <div className="ray"></div>
                 <div className="text">Charles</div>
                 <div>Frontend Developer</div>
