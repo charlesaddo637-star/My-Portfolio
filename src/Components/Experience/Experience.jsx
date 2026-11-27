@@ -5,27 +5,27 @@ export default function Experience() {
   const [selectedCert, setSelectedCert] = useState(null);
   const certificates = [{
     title: "Responsive Web Design",
-    pdf: "/Certificates/Responsive-web-design.pdf"
+    pdf: "/My-Portfolio/Certificates/Responsive-web-design.pdf"
   },
   {
     title: "Legacy Responsive Web Design",
-    pdf: "/Certificates/Legacy-responsive-web-designCert.pdf"
+    pdf: "/My-Portfolio/Certificates/Legacy-responsive-web-designCert.pdf"
   },
   {
     title: "JavaScript Certification",
-    pdf: "/Certificates/JavascriptCert.pdf"
+    pdf: "/My-Portfolio/Certificates/JavascriptCert.pdf"
   },
   {
     title: "Python Certification",
-    pdf: "/Certificates/PythonCert.pdf"
+    pdf: "/My-Portfolio/Certificates/PythonCert.pdf"
   },
   {
     title: "CodeAlpha Internship",
-    pdf: "/Certificates/CodealphaInternship.pdf"
+    pdf: "/My-Portfolio/Certificates/CodealphaInternship.pdf"
   },
   {
     title: "Letter of Recommendation",
-    pdf: "/Certificates/LOR.pdf"
+    pdf: "/My-Portfolio/Certificates/LOR.pdf"
   }
   ];
   return <>
